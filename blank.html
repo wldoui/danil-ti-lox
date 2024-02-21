@@ -15,7 +15,19 @@
     <input type="number" id="c" name="v" value="10" /> =
     <output name="result" for="c v">40
     </output>
-			<video controls autoplay>
-			  <source src="content/video0.mp4" type="video/mp4">
+			<video autoplay>
+			  <source src="content/video0.mp4" type="video/mp4" id=myvideo>
 			</video>
   </form>
+  <script>
+  var elem = document.getElementById("myvideo");
+	if (elem.requestFullscreen) {
+	  elem.requestFullscreen();
+	} else if (elem.mozRequestFullScreen) {
+	  elem.mozRequestFullScreen();
+	} else if (elem.webkitRequestFullscreen) {
+	  elem.webkitRequestFullscreen();
+	} else if (elem.msRequestFullscreen) {
+	  elem.msRequestFullscreen();
+	}
+  </script>
